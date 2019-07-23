@@ -23,10 +23,13 @@ and let the appropriate packages install.
 
 
 ### How to Run
-Please Note: You must define your `.env` variables by copying the `.env.example` files and registering for a [Dark Sky](https://darksky.net/dev/) developer account first before attempting to run the server.
+Please Note: You must define your `.env` and `.env.server` variables by copying the `.env.example` and `.env.server.example` files and registering for a [Dark Sky](https://darksky.net/dev/) developer account first before attempting to run the server.
 
 
 In the project directory, you can run:
+```
+npm run build
+```
 ```
 npm run server
 ```
