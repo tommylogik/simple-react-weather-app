@@ -1,0 +1,41 @@
+.App {
+    margin-top: 8em;
+}
+
+.day-of-week {
+    margin-bottom: 2em;
+    font-weight: bold;
+}
+
+.local-weather-form {
+    margin-bottom: 2em;
+}
+
+.weather-grid .cell {
+    padding: 1em 1em 1em 0;
+    margin: 1em 0 4em;
+    min-height: 10em;
+}
+
+.current-conditions {
+    margin-bottom: 8em;
+}
+
+.temp {
+    position: relative;
+    top: -0.3em;
+    font-size: 80%;
+}
+
+.temp-hi {
+    font-size: 100%;
+}
+
+.temp-seperator {
+    font-weight: 100;
+    color: #c0c0c0;
+}
+
+.temp-lo {
+    font-size: 80%;
+}
