@@ -27,9 +27,9 @@ Please Note: You must define your `.env` variables by copying the `.env.example`
 
 
 In the project directory, you can run:
-
-
-### `npm run server`
+```
+npm run server
+```
 
 Runs the app in the production mode.<br>
 Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
