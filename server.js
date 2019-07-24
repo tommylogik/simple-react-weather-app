@@ -48,7 +48,7 @@ fastify.get('/api/', async (req, resp) => {
 });
 
 
-fastify.listen(3001, (err, address) => {
+fastify.listen(process.env.PORT || 5000, process.env.HOST || '0.0.0.0',(err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
