@@ -1,10 +1,14 @@
 {
   "name": "weather",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "contributors": ["Tommy Gonzalez"],
   "proxy": "http://localhost:3001",
   "homepage": "http://localhost:3001",
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
+  },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
     "dotenv": "^8.0.0",
@@ -22,13 +26,16 @@
     "zipcodes": "^8.0.0",
     "pino-pretty": "^3.2.0"
   },
+
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "react-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server.js",
-    "server-pretty": "npm run build && node server.js | ./node_modules/.bin/pino-pretty"
+    "server-pretty": "node server.js | ./node_modules/.bin/pino-pretty",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
