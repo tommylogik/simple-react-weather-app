@@ -37,6 +37,27 @@ fastify.get('/api/', async (req, resp) => {
         fastify.log.error(error);
       }
 
+      /**
+       * Format icons
+       */
+      if (Object.prototype.hasOwnProperty.call(json, 'currently')) {
+        json.currently.icon = json.currently.icon.toUpperCase().replace(/-/g, '-');
+      }
+
+      if (Object.prototype.hasOwnProperty.call(json, 'daily') &&
+        Object.prototype.hasOwnProperty.call(json.daily, 'icon')) {
+        json.currently.icon = json.currently.icon.toUpperCase().replace(/-/g, '_');
+        json.daily.icon = json.daily.icon.toUpperCase().replace(/-/g, '_');
+
+        for (const key in json.daily.data) {
+          if (Array.prototype.keys.call(json.daily.data, key)) {
+            json.daily.data[key].icon = json.daily.data[key].icon.toUpperCase().replace(/-/g, '_');
+
+          }
+        }
+      }
+
+
       return json;
     };
 
@@ -48,7 +69,7 @@ fastify.get('/api/', async (req, resp) => {
 });
 
 
-fastify.listen(process.env.PORT || 5000, process.env.HOST || '0.0.0.0',(err, address) => {
+fastify.listen(process.env.PORT || 5000, process.env.HOST || '0.0.0.0', (err, address) => {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
