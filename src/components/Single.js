@@ -21,7 +21,7 @@ const Single = (props) => {
       <h3>
         <Skycons
           color='black'
-          icon={props.forecast.icon.toUpperCase().replace(/-/g, '_')}
+          icon={props.forecast.icon}
           autoplay={true}
           style={{ width: '2em', height: '1em' }}
         />
